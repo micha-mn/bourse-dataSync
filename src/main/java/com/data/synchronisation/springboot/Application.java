@@ -2,25 +2,18 @@ package com.data.synchronisation.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.event.ApplicationReadyEvent;
-import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Component;
-import org.springframework.web.reactive.function.client.WebClient;
+//import org.springframework.web.reactive.function.client.WebClient;
 
-import java.time.Duration;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
-import lombok.var;
-import lombok.extern.slf4j.Slf4j;
-import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
+//import reactor.core.publisher.Mono;
 
-@Slf4j
 @SpringBootApplication
 @EnableAsync
 public class Application {
@@ -40,12 +33,13 @@ public class Application {
 	    return executor;
 	  }
 	
+	/* 
     @Bean
     WebClient webClient(WebClient.Builder builder) {
         return builder.build();
     }
 
-  /*  @Bean
+    @Bean
     ApplicationListener<ApplicationReadyEvent> ready(AvailabilityClient client) {
         return applicationReadyEvent -> {
             for (var console : "ps5,xbox,ps4,switch".split(",")) {
@@ -59,6 +53,7 @@ public class Application {
     }*/
 }
 
+/*
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -84,3 +79,4 @@ class AvailabilityClient {
     }
 
 }
+*/
